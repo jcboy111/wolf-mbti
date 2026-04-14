@@ -333,7 +333,7 @@
                     maintainAspectRatio: true,
                     scales: {
                         r: {
-                            min: 3,
+                            min: 2,
                             max: 9,
                             ticks: {
                                 stepSize: 1,
@@ -369,7 +369,7 @@
             // 计算各维度得分和条形图宽度
             const levelLabelMap = { '低': 'L', '中': 'M', '高': 'H' };
             const dimensionBars = Object.entries(dimensionScores).map(([name, score]) => {
-                const percent = ((score - 3) / 6) * 100;
+                const percent = Math.max(10, ((score - 3) / 6) * 100);
                 const level = userLevels[name];
                 const label = levelLabelMap[level] || level;
                 return { name, label, score, percent };
