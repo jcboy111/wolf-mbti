@@ -447,10 +447,26 @@
                         useCORS: true
                     });
 
-                    const link = document.createElement('a');
-                    link.download = '我的狼人杀人格.png';
-                    link.href = canvas.toDataURL('image/png');
-                    link.click();
+                    // 创建全屏遮罩
+                    const overlay = document.createElement('div');
+                    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;';
+                    overlay.onclick = function() {
+                        document.body.removeChild(overlay);
+                    };
+
+                    // 显示图片
+                    const img = document.createElement('img');
+                    img.src = canvas.toDataURL('image/png');
+                    img.style.cssText = 'max-width:90%;max-height:70%;border-radius:8px;';
+                    overlay.appendChild(img);
+
+                    // 提示文字
+                    const tip = document.createElement('p');
+                    tip.textContent = '长按图片保存或分享';
+                    tip.style.cssText = 'color:#fff;font-size:14px;margin-top:20px;text-align:center;padding:0 20px;';
+                    overlay.appendChild(tip);
+
+                    document.body.appendChild(overlay);
 
                     btn.textContent = '生成海报';
                     btn.disabled = false;
