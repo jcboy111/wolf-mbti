@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(C:/Users/78619/AppData/Local/web-rooter/standalone/web-rooter.exe quick:*)",
+      "Bash(\"C:/Users/78619/AppData/Local/web-rooter/standalone/web-rooter.exe\" --server)",
+      "Bash(curl -s http://localhost:8080/health)",
+      "Bash(curl -s http://127.0.0.1:8765/)",
+      "Bash(curl -s http://127.0.0.1:8765/docs)",
+      "Bash(curl:*)",
+      "Skill(update-config)",
+      "Skill(update-config:*)"
+    ]
+  }
+}

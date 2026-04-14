@@ -45,9 +45,10 @@
         .result-icon {
             width: 100px;
             height: 100px;
-            border-radius: 50%;
+            border-radius: 0;
             margin-bottom: 16px;
-            object-fit: cover;
+            object-fit: contain;
+            background-color: #fff;
         }
 
         .type-code {
@@ -397,7 +398,7 @@
                 <div class="result-card">
                     <div style="font-size: 14px; color: #4d6a53; margin-bottom: 8px;">你的狼人杀人格类型是</div>
                     <div class="type-name" style="font-size: 26px;">${persona.name}</div>
-                    <div class="type-code" style="font-size: 18px; margin-top: 4px; margin-bottom: 16px;">${persona.code}</div>
+                    <div class="type-code" style="font-size: 18px; margin-top: 4px; margin-bottom: 16px;">${persona.english}</div>
                     <img src="${persona.image}" alt="${persona.name}" class="result-icon" style="margin: 0 auto 12px;">
                     <div style="font-size: 15px; color: #3a5a3f; font-style: italic;">"${persona.tagline}"</div>
                 </div>
@@ -405,7 +406,7 @@
                 <!-- 第二个框：主类型 -->
                 <div class="result-card">
                     <div style="font-size: 14px; color: #4d6a53; margin-bottom: 8px;">你的主类型</div>
-                    <div style="font-size: 20px; color: #2e5e3e; font-weight: 600; margin-bottom: 12px;">${persona.code} ${persona.name}</div>
+                    <div style="font-size: 20px; color: #2e5e3e; font-weight: 600; margin-bottom: 12px;">${persona.english} ${persona.name}</div>
                     <div class="tags" style="margin-bottom: 12px;">
                         ${persona.tags.map(t => `<span class="tag">${t}</span>`).join('')}
                     </div>
