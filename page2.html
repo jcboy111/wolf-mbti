@@ -237,8 +237,7 @@
         // 加载题目
         async function loadQuestions() {
             try {
-                const origin = window.location.origin;
-                const response = await fetch(origin + '/questions.json?t=' + Date.now());
+                const response = await fetch('./questions.json?t=' + Date.now());
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
