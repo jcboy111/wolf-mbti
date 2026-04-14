@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "dimension": "冲锋意愿",
+      "question": "拿到狼人牌，上警环节你的第一选择？",
+      "options": [
+        { "label": "A", "text": "安静弃票蹲警下，绝不露头当焦点位", "score": 1 },
+        { "label": "B", "text": "观望全场局势，没人悍跳我就苟着混", "score": 2 },
+        { "label": "C", "text": "秒上警抢发言，必悍跳预言家乱杀全场", "score": 3 }
+      ]
+    },
+    {
+      "id": 2,
+      "dimension": "冲锋意愿",
+      "question": "手握强神牌（女巫/猎人），你会如何操作？",
+      "options": [
+        { "label": "A", "text": "全程隐藏身份，低调苟活绝不带队", "score": 1 },
+        { "label": "B", "text": "局势混乱时浅浅暗示，不强行起跳", "score": 2 },
+        { "label": "C", "text": "直接拍身份带队，明牌打架掌控全局", "score": 3 }
+      ]
+    },
+    {
+      "id": 3,
+      "dimension": "冲锋意愿",
+      "question": "场上双预言家对跳，没人带队分不清真假？",
+      "options": [
+        { "label": "A", "text": "全程划水不站队，谁都不帮避免引火", "score": 1 },
+        { "label": "B", "text": "听完两轮发言，犹豫之后再慢慢站边", "score": 2 },
+        { "label": "C", "text": "主动起身分析，强势起跳带队整理格局", "score": 3 }
+      ]
+    },
+    {
+      "id": 4,
+      "dimension": "逻辑分析",
+      "question": "一局结束，你判断狼人的核心依据是？",
+      "options": [
+        { "label": "A", "text": "全靠直觉缘分，看顺眼就认好人", "score": 1 },
+        { "label": "B", "text": "简单听听发言，大致盘一下狼坑就行", "score": 2 },
+        { "label": "C", "text": "深挖票型、发言漏洞，逐人盘逻辑锁狼", "score": 3 }
+      ]
+    },
+    {
+      "id": 5,
+      "dimension": "逻辑分析",
+      "question": "别人发言含糊其辞、漏洞百出时？",
+      "options": [
+        { "label": "A", "text": "听不懂就跳过，懒得深究随便玩玩", "score": 1 },
+        { "label": "B", "text": "隐约觉得不对劲，默默记在心里观望", "score": 2 },
+        { "label": "C", "text": "当场揪出逻辑bug，逐条拆解疯狂点狼", "score": 3 }
+      ]
+    },
+    {
+      "id": 6,
+      "dimension": "逻辑分析",
+      "question": "多人发言重复划水，全场信息混乱？",
+      "options": [
+        { "label": "A", "text": "跟着大众投票，别人投谁我投谁", "score": 1 },
+        { "label": "B", "text": "梳理关键信息，勉强拼凑简单逻辑", "score": 2 },
+        { "label": "C", "text": "整理全场时间线，独立盘出完整好人狼坑", "score": 3 }
+      ]
+    },
+    {
+      "id": 7,
+      "dimension": "话痨程度",
+      "question": "遇到玩家乱带节奏、胡乱踩人搅局？",
+      "options": [
+        { "label": "A", "text": "沉默无视，不想争吵，多一事不如少一事", "score": 1 },
+        { "label": "B", "text": "温和纠正错误，理性说出自己的看法", "score": 2 },
+        { "label": "C", "text": "当场回怼对线，拉高音量，强行掌控舆论", "score": 3 }
+      ]
+    },
+    {
+      "id": 8,
+      "dimension": "话痨程度",
+      "question": "发言时间快到了，法官提醒\"还有 10 秒\"，你会？",
+      "options": [
+        { "label": "A", "text": "立刻收尾：过", "score": 1 },
+        { "label": "B", "text": "快速补1句：重点就是出3号，完毕", "score": 2 },
+        { "label": "C", "text": "语速加快：最后一句说个关键！3号的警徽流是XXXX，很有问题，优先出3！", "score": 3 }
+      ]
+    },
+    {
+      "id": 9,
+      "dimension": "话痨程度",
+      "question": "你想让大家跟着你的投票选择时？",
+      "options": [
+        { "label": "A", "text": "默默投票，从不主动劝说任何人", "score": 1 },
+        { "label": "B", "text": "简单解释理由，佛系号召大家理性投票", "score": 2 },
+        { "label": "C", "text": "花式画饼+情绪渲染，洗脑式带队绑定全队", "score": 3 }
+      ]
+    },
+    {
+      "id": 10,
+      "dimension": "跟风指数",
+      "question": "陌生玩家给你发金水、全程死保你？",
+      "options": [
+        { "label": "A", "text": "直接无脑信任，铁好人锁死一辈子", "score": 3 },
+        { "label": "B", "text": "心存一点顾虑，观察两轮再决定立场", "score": 2 },
+        { "label": "C", "text": "极度警惕防备，越保我越可疑，全员皆狼", "score": 1 }
+      ]
+    },
+    {
+      "id": 11,
+      "dimension": "跟风指数",
+      "question": "全场公认的铁好人，主动拉拢你抱团？",
+      "options": [
+        { "label": "A", "text": "立马贴贴抱团，无条件相信对方", "score": 3 },
+        { "label": "B", "text": "保持安全距离，适度合作保留心眼", "score": 2 },
+        { "label": "C", "text": "拒绝盲目抱团，哪怕好人也全程提防", "score": 1 }
+      ]
+    },
+    {
+      "id": 12,
+      "dimension": "跟风指数",
+      "question": "场上只剩少数玩家，局势逐渐明朗？",
+      "options": [
+        { "label": "A", "text": "放松警惕，安心跟着大部队走", "score": 3 },
+        { "label": "B", "text": "小幅提高戒备，防止隐藏深水狼人", "score": 2 },
+        { "label": "C", "text": "疑心拉满，谁都不信，每一个都要盘一遍", "score": 1 }
+      ]
+    },
+    {
+      "id": 13,
+      "dimension": "阵营利己度",
+      "question": "狼队友发言聊爆，马上就要被公投出局？",
+      "options": [
+        { "label": "A", "text": "拼命发言力保，狼队一体绝不卖队友", "score": 1 },
+        { "label": "B", "text": "中立不踩不捞，两头不得罪低调混过", "score": 2 },
+        { "label": "C", "text": "带头冲票出卖，顶级倒钩，自保永远第一", "score": 3 }
+      ]
+    },
+    {
+      "id": 14,
+      "dimension": "阵营利己度",
+      "question": "为了阵营胜利，需要你牺牲自己扛推出局？",
+      "options": [
+        { "label": "A", "text": "心甘情愿扛推，为团队赢比赛无所谓", "score": 1 },
+        { "label": "B", "text": "犹豫纠结，能不牺牲就尽量保全自己", "score": 2 },
+        { "label": "C", "text": "绝对拒绝牺牲，谁也别想踩我出门打工", "score": 3 }
+      ]
+    },
+    {
+      "id": 15,
+      "dimension": "阵营利己度",
+      "question": "好人队友逻辑离谱，疯狂带崩全场节奏？",
+      "options": [
+        { "label": "A", "text": "耐心包容补救，拼命挽回队友的失误", "score": 1 },
+        { "label": "B", "text": "默默划清界限，不帮忙也不恶意背刺", "score": 2 },
+        { "label": "C", "text": "公开指责甩锅，为了自保直接卖掉队友", "score": 3 }
+      ]
+    },
+    {
+      "id": 16,
+      "dimension": "位置玄学",
+      "question": "你最常用的抿人、找狼方式是？",
+      "options": [
+        { "label": "A", "text": "只看发言票型，纯硬核逻辑拒绝玄学", "score": 1 },
+        { "label": "B", "text": "主打逻辑为辅，偶尔参考位置简单判断", "score": 2 },
+        { "label": "C", "text": "沉迷边角位、夹刀位，位置学+挂相直接锁狼", "score": 3 }
+      ]
+    },
+    {
+      "id": 17,
+      "dimension": "位置玄学",
+      "question": "玩家表情紧张、打字犹豫、状态不对劲？",
+      "options": [
+        { "label": "A", "text": "完全无视场外，只以游戏发言为准", "score": 1 },
+        { "label": "B", "text": "稍微留意状态，不作为主要判断依据", "score": 2 },
+        { "label": "C", "text": "靠表情、语气、小动作抿人，场外大于逻辑", "score": 3 }
+      ]
+    },
+    {
+      "id": 18,
+      "dimension": "位置玄学",
+      "question": "大家都在盘正经逻辑，你会？",
+      "options": [
+        { "label": "A", "text": "跟着盘标准逻辑，不搞花里胡哨的猜想", "score": 1 },
+        { "label": "B", "text": "偶尔整活玩梗，不影响正常游戏节奏", "score": 2 },
+        { "label": "C", "text": "主打封建迷信，星座、座位、名字全拿来判身份", "score": 3 }
+      ]
+    },
+    {
+      "id": 19,
+      "dimension": "胜负执念心",
+      "question": "开局劣势巨大，好人注定很难翻盘？",
+      "options": [
+        { "label": "A", "text": "直接摆烂佛系，输赢无所谓主打陪伴", "score": 1 },
+        { "label": "B", "text": "放平心态尽力游玩，输了也不会生气", "score": 2 },
+        { "label": "C", "text": "极度不甘心，疯狂努力，非要逆风翻盘不可", "score": 3 }
+      ]
+    },
+    {
+      "id": 20,
+      "dimension": "胜负执念心",
+      "question": "队友全程摆烂划水，完全不认真玩游戏？",
+      "options": [
+        { "label": "A", "text": "一笑而过，大家开心娱乐就足够了", "score": 1 },
+        { "label": "B", "text": "暗自无奈，默默认真玩完这一局就行", "score": 2 },
+        { "label": "C", "text": "瞬间上头破防，嫌弃菜队友，胜负欲爆炸", "score": 3 }
+      ]
+    },
+    {
+      "id": 21,
+      "dimension": "胜负执念心",
+      "question": "只差一票就能赢，最终遗憾输掉对局？",
+      "options": [
+        { "label": "A", "text": "完全不在意，下一把继续快乐开局", "score": 1 },
+        { "label": "B", "text": "稍微有点可惜，短暂感慨之后快速翻篇", "score": 2 },
+        { "label": "C", "text": "耿耿于怀疯狂emo，纠结失误非要复盘掰头", "score": 3 }
+      ]
+    },
+    {
+      "id": 22,
+      "dimension": "易燃易爆",
+      "question": "莫名被多人集体踩、被强行打成焦点狼坑？",
+      "options": [
+        { "label": "A", "text": "瞬间慌乱破防，语无伦次越解释越黑", "score": 3 },
+        { "label": "B", "text": "冷静平稳表水，好好解释慢慢洗清嫌疑", "score": 2 },
+        { "label": "C", "text": "抗压拉满丝毫不慌，反向踩人极限洗白反杀", "score": 1 }
+      ]
+    },
+    {
+      "id": 23,
+      "dimension": "易燃易爆",
+      "question": "全场所有人都不相信你，执意要投你出局？",
+      "options": [
+        { "label": "A", "text": "心态崩溃摆烂，直接放弃辩解躺平出局", "score": 3 },
+        { "label": "B", "text": "耐心多次辩解，尽力争取好人的信任", "score": 2 },
+        { "label": "C", "text": "心态稳如老狗，强势反击，哪怕被投也要硬气对线", "score": 1 }
+      ]
+    },
+    {
+      "id": 24,
+      "dimension": "易燃易爆",
+      "question": "被女巫盲毒、被猎人乱带，无辜莫名出局？",
+      "options": [
+        { "label": "A", "text": "委屈破防，瞬间心情不好开始摆烂", "score": 3 },
+        { "label": "B", "text": "无奈接受现实，吐槽两句继续好好游玩", "score": 2 },
+        { "label": "C", "text": "淡定看待全局，理性分析，下一把狠狠拿捏全场", "score": 1 }
+      ]
+    }
+  ]
+}

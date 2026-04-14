@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+            padding: 20px;
+            padding-bottom: 100px;
+        }
+
+        /* 顶部进度条 */
+        .progress-bar {
+            max-width: 500px;
+            margin: 0 auto 20px;
+        }
+
+        .progress-text {
+            font-size: 14px;
+            color: #4d6a53;
+            margin-bottom: 8px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 6px;
+            background: rgba(77, 106, 83, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #6c8d71 0%, #4d6a53 100%);
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+
+        /* 问题卡片 */
+        .question-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(77, 106, 83, 0.1);
+        }
+
+        .question-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #6c8d71 0%, #4d6a53 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 12px;
+        }
+
+        .question-title {
+            font-size: 16px;
+            color: #2e5e3e;
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            padding: 16px;
+            background: #f5f9f6;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .option:hover {
+            background: #e8f0ea;
+            border-color: rgba(77, 106, 83, 0.3);
+        }
+
+        .option.selected {
+            background: linear-gradient(135deg, #6c8d71 0%, #4d6a53 100%);
+            border-color: #4d6a53;
+        }
+
+        .option.selected .option-label {
+            color: white;
+        }
+
+        .option.selected .option-text {
+            color: white;
+        }
+
+        .option-label {
+            width: 28px;
+            height: 28px;
+            background: rgba(77, 106, 83, 0.1);
+            color: #4d6a53;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .option.selected .option-label {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .option-text {
+            color: #3a5a3f;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        /* 底部按钮 */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px 20px;
+            background: linear-gradient(to top, #e8f5e9 80%, transparent);
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            background: white;
+            color: #4d6a53;
+            font-size: 15px;
+            font-weight: 500;
+            border: 2px solid #4d6a53;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: #4d6a53;
+            color: white;
+        }
+
+        .nav-btn.primary {
+            background: linear-gradient(135deg, #6c8d71 0%, #4d6a53 100%);
+            color: white;
+            border: none;
+        }
+
+        .nav-btn.primary:hover {
+            opacity: 0.9;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .nav-btn:disabled:hover {
+            background: white;
+            color: #4d6a53;
+        }
+
+        /* 加载提示 */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #4d6a53;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar">
+        <div class="progress-text" id="progressText">加载中...</div>
+        <div class="progress-track">
+            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-header">
+            <div class="question-number" id="questionNumber">1</div>
+            <div class="question-title" id="questionTitle">加载中...</div>
+        </div>
+        <div class="options" id="optionsContainer">
+            <div class="loading">加载题目中...</div>
+        </div>
+    </div>
+
+    <div class="bottom-bar">
+        <button class="nav-btn" id="prevBtn" onclick="prevQuestion()">上一题</button>
+        <button class="nav-btn primary" id="nextBtn" onclick="nextQuestion()">下一题</button>
+    </div>
+
+    <script>
+        // 全局变量
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = {}; // { questionId: score }
+
+        // 加载题目
+        async function loadQuestions() {
+            try {
+                const origin = window.location.origin;
+                const response = await fetch(origin + '/questions.json?t=' + Date.now());
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                questions = data.questions;
+                // 随机打乱题目顺序
+                shuffleArray(questions);
+                renderQuestion();
+            } catch (error) {
+                console.error('加载题目失败:', error);
+                document.getElementById('optionsContainer').innerHTML = '<div class="loading">加载失败，请刷新重试<br><small>' + error.message + '</small></div>';
+            }
+        }
+
+        // 基于题目ID的伪随机排序（固定顺序）
+        function shuffleArray(array) {
+            // 按题目ID的哈希排序，保证每次访问顺序相同
+            return array.sort((a, b) => {
+                const hashA = (a.id * 17 + 31) % 24;
+                const hashB = (b.id * 17 + 31) % 24;
+                return hashA - hashB;
+            });
+        }
+
+        // 渲染题目
+        function renderQuestion() {
+            const question = questions[currentQuestionIndex];
+
+            // 更新进度
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            document.getElementById('progressText').textContent = `${currentQuestionIndex + 1} / ${questions.length}`;
+
+            // 更新题目
+            document.getElementById('questionNumber').textContent = currentQuestionIndex + 1;
+            document.getElementById('questionTitle').textContent = question.question;
+
+            // 更新选项
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = question.options.map(opt => `
+                <div class="option ${userAnswers[question.id] === opt.score ? 'selected' : ''}"
+                     onclick="selectOption(${opt.score})">
+                    <div class="option-label">${opt.label}</div>
+                    <div class="option-text">${opt.text}</div>
+                </div>
+            `).join('');
+
+            // 更新按钮状态
+            document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
+
+            // 最后一题显示"查看结果"
+            const nextBtn = document.getElementById('nextBtn');
+            if (currentQuestionIndex === questions.length - 1) {
+                nextBtn.textContent = '查看结果';
+                nextBtn.onclick = showResult;
+            } else {
+                nextBtn.textContent = '下一题';
+                nextBtn.onclick = nextQuestion;
+            }
+        }
+
+        // 选择选项
+        function selectOption(score) {
+            const question = questions[currentQuestionIndex];
+            userAnswers[question.id] = score;
+
+            // 更新UI
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.querySelectorAll('.option').forEach((opt, index) => {
+                const optData = question.options[index];
+                if (optData.score === score) {
+                    opt.classList.add('selected');
+                } else {
+                    opt.classList.remove('selected');
+                }
+            });
+
+            // 自动跳转到下一题
+            if (currentQuestionIndex < questions.length - 1) {
+                setTimeout(() => {
+                    currentQuestionIndex++;
+                    renderQuestion();
+                }, 300); // 300ms 延迟让用户看到选中的效果
+            } else {
+                // 最后一题，显示查看结果
+                const nextBtn = document.getElementById('nextBtn');
+                nextBtn.textContent = '查看结果';
+                nextBtn.onclick = showResult;
+            }
+        }
+
+        // 上一题
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderQuestion();
+            }
+        }
+
+        // 下一题
+        function nextQuestion() {
+            if (!userAnswers[questions[currentQuestionIndex].id]) {
+                alert('请先选择一个答案');
+                return;
+            }
+
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion();
+            }
+        }
+
+        // 查看结果
+        function showResult() {
+            if (!userAnswers[questions[currentQuestionIndex].id]) {
+                alert('请先选择一个答案');
+                return;
+            }
+
+            // 计算结果并跳转
+            const result = calculateResult();
+            // 将结果存储到 sessionStorage
+            sessionStorage.setItem('testResult', JSON.stringify(result));
+            window.location.href = 'page3.html';
+        }
+
+        // 计算结果
+        function calculateResult() {
+            // 按维度分组计算得分
+            const dimensionScores = {};
+
+            questions.forEach(q => {
+                const dim = q.dimension;
+                const score = userAnswers[q.id] || 0;
+
+                if (!dimensionScores[dim]) {
+                    dimensionScores[dim] = 0;
+                }
+                dimensionScores[dim] += score;
+            });
+
+            // 转换为档位
+            const dimensionLevels = {};
+            for (const dim in dimensionScores) {
+                const score = dimensionScores[dim];
+                if (score <= 4) {
+                    dimensionLevels[dim] = '低';
+                } else if (score <= 6) {
+                    dimensionLevels[dim] = '中';
+                } else {
+                    dimensionLevels[dim] = '高';
+                }
+            }
+
+            return {
+                dimensionScores,
+                dimensionLevels
+            };
+        }
+
+        // 页面加载时获取题目
+        loadQuestions();
+    </script>
+</body>
+</html>
