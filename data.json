@@ -6,7 +6,7 @@
       "tagline": "我是一头真预言家，不信晚上来验我！",
       "description": "天生演员，拿狼即影帝，骗遍全场不眨眼。拿狼必跳预言家，发言声情并茂，逻辑闭环，拿狼比好人还像好人。",
       "tags": ["悍跳狼王", "演技天花板"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/HTXJ.jpg"
     },
     {
       "code": "DGYYY",
@@ -14,7 +14,7 @@
       "tagline": "狼队不配赢，全票出 3 号（狼队友）！",
       "description": "顶级卧底，卖队友保自己，笑到最后才是赢家。全程站边真预言家，疯狂踩队友，比好人还正义，最后偷偷冲票赢。",
       "tags": ["倒钩狼", "狼队卧底"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/DGYYY.jpg"
     },
     {
       "code": "CFFQ",
@@ -22,7 +22,7 @@
       "tagline": "全票打飞这个预言家！不投的晚上吃刀！",
       "description": "狼队急先锋，用嗓门征服全场，不服就干！无脑站边悍跳狼，情绪激昂、逻辑爆炸、强行归票，谁不站边就喷谁。",
       "tags": ["冲锋狼", "煽动王者"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/CFFQ.jpg"
     },
     {
       "code": "SHYL",
@@ -30,7 +30,7 @@
       "tagline": "我是好人，过。",
       "description": "隐形人玩法，沉默是金，活到最后就是胜利。全程划水、不站队、不说话、存在感为零，活到最后一刀定胜负。",
       "tags": ["深水狼", "潜水大师"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/SHYL.jpg"
     },
     {
       "code": "LBZWL",
@@ -46,7 +46,7 @@
       "tagline": "警徽流先 1 后 2，昨晚验 3 金水，信我好人赢！",
       "description": "全场唯一真预言家，可惜好人眼瞎，带不动啊！逻辑严谨、警徽流清晰、分析全场、带队控场，但经常没人信。",
       "tags": ["人间清醒预言家"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/LJLYCJ.jpg"
     },
     {
       "code": "KLNW",
@@ -54,7 +54,7 @@
       "tagline": "8 号发言太气人，今晚请你喝可乐！",
       "description": "手握双药，心情决定生死，惹我就送你一瓶可乐。乱毒人、乱救人，看心情开药，「请你喝可乐」= 毒你。",
       "tags": ["魔药女巫", "喜怒无常"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/KLNW.jpg"
     },
     {
       "code": "QPHQ",
@@ -62,7 +62,7 @@
       "tagline": "敢出我？我开枪带 3 号走！",
       "description": "铁血硬汉，带枪上岗，谁踩我就同归于尽！脾气火爆、谁踩我就带谁走，死了必带一个，宁死不屈。",
       "tags": ["铁血猎人", "一言不合就开枪"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/qplr.jpg"
     },
     {
       "code": "YMBM",
@@ -70,7 +70,7 @@
       "tagline": "我觉得 6 号像狼，全票出 6！（6 号是预言家）",
       "description": "好人卧底，站边全靠蒙，赢了全靠躺。逻辑混乱、站错队、乱投票、乱带节奏，好人赢了全靠躺。",
       "tags": ["愚民", "搅屎棍平民"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/YMBM.jpg"
     },
     {
       "code": "JSLG",
@@ -78,7 +78,7 @@
       "tagline": "预言家金水，我铁站预言家，预言家说啥都对！",
       "description": "谁给我金水我跟谁走，主打一个忠诚（无脑）。被发金水就疯狂舔，谁给我金水我就站谁，无脑跟着走。",
       "tags": ["金水乖宝宝"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/JSLG.jpg"
     },
     {
       "code": "MZBSM",
@@ -86,7 +86,7 @@
       "tagline": "我是好人，别出我，过。",
       "description": "佛系玩家，活着最重要，输赢无所谓。不站队、不踩人、不分析，只求自己不出局，苟到最后就是赢。",
       "tags": ["划水民", "保命大师"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/MZBSM.jpg"
     },
     {
       "code": "QSCARRY",
@@ -94,7 +94,7 @@
       "tagline": "听我的，全票出 5 号，这把稳赢！",
       "description": "全场定海神针，好人的爹，狼人噩梦。清晰带队、抿人极准、控场投票，好人全靠他带飞。",
       "tags": ["强神大佬", "全场 MVP"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/QSCARRY.jpg"
     },
     {
       "code": "XXWXZ",
@@ -102,7 +102,7 @@
       "tagline": "3 号在边角位，必是狼，不用逻辑！",
       "description": "封建迷信玩家，位置学比逻辑香，玄学赢游戏。不盘逻辑盘位置：「后置位必出狼、预言家上下必狼、边角位出狼」。",
       "tags": ["位置学大师", "封建迷信"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/XXWXZ.jpg"
     },
     {
       "code": "TLSFG",
@@ -110,7 +110,7 @@
       "tagline": "我发誓我是好人，骗你我不是人！",
       "description": "情绪大于逻辑，贴脸输出，谁也不信我就发誓。发毒誓、赌咒、场外，情绪激动，不用逻辑用发誓。",
       "tags": ["贴脸大师", "情绪输出"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/TLSFG.jpg"
     },
     {
       "code": "CWGSJ",
@@ -118,7 +118,7 @@
       "tagline": "你刚才笑了，你肯定是狼！",
       "description": "不聊逻辑聊表情，场外信息比发言重要。聊场外、看表情、抿挂相、聊现实，不聊游戏聊生活。",
       "tags": ["场外选手", "八卦记者"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/CWGSJ.jpg"
     },
     {
       "code": "SDCWK",
@@ -126,7 +126,7 @@
       "tagline": "我是预言家，昨晚查杀上帝，上帝是狼！",
       "description": "脑洞清奇，查杀全靠心情，主打一个离谱。乱查杀、乱发金水、甚至查杀上帝，主打一个离谱。",
       "tags": ["查杀上帝", "脑洞玩家"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/SDCWK.jpg"
     },
     {
       "code": "BGCX",
@@ -134,7 +134,7 @@
       "tagline": "都怪 5 号，这把全是 5 号的锅！",
       "description": "全场背锅位，输赢都是我，冤种本种。不管谁错，锅都是他的：预言家输了怪他、女巫毒错怪他、好人输了怪他。",
       "tags": ["万年背锅", "冤种玩家"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/BGCX.jpg"
     },
     {
       "code": "SDBAH",
@@ -142,7 +142,7 @@
       "tagline": "怎么又是我活到最后？狼人从来不刀我！",
       "description": "天选之子，首刀绝缘体，狼人见了都绕着走。不管怎么玩，永远不被首刀，狼人永远不刀他。",
       "tags": ["首刀绝缘体", "天选之子"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/SDBAH.jpg"
     },
     {
       "code": "QXBZG",
@@ -150,7 +150,7 @@
       "tagline": "会不会玩？菜死了！",
       "description": "脾气比游戏大，玩一把气半天，伤身又伤肝。容易激动、骂人、摔麦、玩个游戏气到发抖。",
       "tags": ["鞭炮脾气", "一点就炸"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/QXBZG.jpg"
     },
     {
       "code": "MJMYXR",
@@ -158,7 +158,7 @@
       "tagline": "我是民及民以下，但我真的是好人啊！",
       "description": "全场最冤好人，长了张狼脸，天天被冤枉。身份最低、最像狼、但真的是好人，天天被出、被毒、被枪。",
       "tags": ["民及民以下", "绝对好人"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/MJMYXR.jpg"
     },
     {
       "code": "QNSY",
@@ -166,7 +166,7 @@
       "tagline": "我不是玩家，我是观众席的 VIP",
       "description": "别人刀人，你在写剧本。别人悍跳，你在改规则。你不是场上任何一个身份，但你比所有身份都重要。你最大的特点是全程淡定，因为对你来说，这不过是一场模拟。你最常说的话是「天黑请闭眼」。",
       "tags": ["全场透视", "规则制定者"],
-      "image": "sbti_pic/icon.jpg"
+      "image": "wbti_pic/QNSY.jpg"
     }
   ]
 }
