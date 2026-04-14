@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>测试结果</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -424,12 +425,42 @@
                 <!-- 底部按钮 -->
                 <div class="bottom-bar">
                     <a href="page2.html" class="nav-btn">重新测试</a>
+                    <button class="nav-btn" onclick="generatePoster()">生成海报</button>
                     <a href="index.html" class="nav-btn primary">返回首页</a>
                 </div>
             `;
 
             // 渲染雷达图（使用实际分数）
             renderRadarChart(dimensionScores);
+
+            // 生成海报
+            window.generatePoster = async function() {
+                const btn = document.querySelector('button[onclick="generatePoster()"]');
+                btn.textContent = '生成中...';
+                btn.disabled = true;
+
+                try {
+                    const resultContainer = document.getElementById('resultContainer');
+                    const canvas = await html2canvas(resultContainer, {
+                        backgroundColor: '#e8f5e9',
+                        scale: 2,
+                        useCORS: true
+                    });
+
+                    const link = document.createElement('a');
+                    link.download = '我的狼人杀人格.png';
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+
+                    btn.textContent = '生成海报';
+                    btn.disabled = false;
+                } catch (error) {
+                    console.error('生成海报失败:', error);
+                    alert('生成海报失败，请重试');
+                    btn.textContent = '生成海报';
+                    btn.disabled = false;
+                }
+            };
         }
 
         // 页面加载时显示结果
