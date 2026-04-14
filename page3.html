@@ -424,12 +424,23 @@
                 <!-- 底部按钮 -->
                 <div class="bottom-bar">
                     <a href="page2.html" class="nav-btn">重新测试</a>
+                    <button class="nav-btn" onclick="shareResult()">分享结果</button>
                     <a href="index.html" class="nav-btn primary">返回首页</a>
                 </div>
             `;
 
             // 渲染雷达图（使用实际分数）
             renderRadarChart(dimensionScores);
+
+            // 分享结果
+            window.shareResult = function() {
+                const shareText = `我在狼人杀人格测试中测出了【${persona.name}】人格！${persona.english}\n\n"${persona.tagline}"\n\n快来测测你是哪种狼人杀玩家吧！`;
+                navigator.clipboard.writeText(shareText).then(() => {
+                    alert('分享内容已复制到剪贴板，快去微信粘贴发送给朋友吧！');
+                }).catch(() => {
+                    alert('复制失败，请手动选择文字复制');
+                });
+            };
         }
 
         // 页面加载时显示结果
