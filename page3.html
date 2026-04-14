@@ -385,14 +385,6 @@
                 </div>
             `).join('');
 
-            // 调试：显示所有匹配及分数
-            const matchList = allMatches.slice(0, 5).map(m => `
-                <div style="padding: 8px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
-                    <span>${m.name}</span>
-                    <span style="color: #4d6a53; font-weight: bold;">${m.score}分</span>
-                </div>
-            `).join('');
-
             container.innerHTML = `
                 <!-- 第一个框：人格结果 -->
                 <div class="result-card">
@@ -427,12 +419,6 @@
                         <canvas id="radarChart"></canvas>
                     </div>
                     ${dimensionBars}
-                </div>
-
-                <!-- 调试信息 -->
-                <div class="dimensions" style="margin-top: 20px;">
-                    <div class="dimensions-title">匹配排名（调试信息）</div>
-                    ${matchList}
                 </div>
 
                 <!-- 底部按钮 -->
