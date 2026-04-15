@@ -234,14 +234,38 @@
         let currentQuestionIndex = 0;
         let userAnswers = {}; // { questionId: score }
 
+        // 缓存1小时
+        const CACHE_TTL = 3600 * 1000;
+        function getCache(key) {
+            try {
+                const item = localStorage.getItem(key);
+                if (!item) return null;
+                const { data, time } = JSON.parse(item);
+                if (Date.now() - time > CACHE_TTL) {
+                    localStorage.removeItem(key);
+                    return null;
+                }
+                return data;
+            } catch { return null; }
+        }
+        function setCache(key, data) {
+            try {
+                localStorage.setItem(key, JSON.stringify({ data, time: Date.now() }));
+            } catch {}
+        }
+
         // 加载题目
         async function loadQuestions() {
             try {
-                const response = await fetch('./questions.json?t=' + Date.now());
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                let data = getCache('questions');
+                if (!data) {
+                    const response = await fetch('./questions.json');
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    data = await response.json();
+                    setCache('questions', data);
                 }
-                const data = await response.json();
                 questions = data.questions;
                 // 随机打乱题目顺序
                 shuffleArray(questions);
