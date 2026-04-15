@@ -398,7 +398,7 @@
         }
 
         // 渲染结果
-        function renderResult(persona, pattern, userLevels, dimensionScores, matchPercent, allMatches) {
+        async function renderResult(persona, pattern, userLevels, dimensionScores, matchPercent, allMatches) {
             const container = document.getElementById('resultContainer');
 
             // 计算各维度得分和条形图宽度
